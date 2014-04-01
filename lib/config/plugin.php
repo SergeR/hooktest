@@ -6,7 +6,7 @@ return array(
     'vendor'=>670917,
     'version'=>'1.0',
     'img'=>'img/brands.png',
-    'shop_settings' => true,
+    'shop_settings' => FALSE,
     'frontend'    => true,
     'icons'=>array(
         16 => 'img/brands.png',
