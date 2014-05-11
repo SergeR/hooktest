@@ -5,12 +5,8 @@ return array(
     'description' => /*_wp*/('Storefront’s Hooks displayed as green blocks'),
     'vendor'=>670917,
     'version'=>'1.0',
-    'img'=>'img/brands.png',
     'shop_settings' => FALSE,
     'frontend'    => true,
-    'icons'=>array(
-        16 => 'img/brands.png',
-    ),
     'handlers' => array(
         'frontend_cart' => 'hookFrontendCart',
         'frontend_category' => 'hookFrontendCategory',

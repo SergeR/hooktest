@@ -10,7 +10,7 @@ class shopHooktestPlugin extends shopPlugin
 
     public function hookFrontendCategory()
     {
-        return $this->hookContent('frontend_category');
+        return $this->hookContent('frontend_category', ['Num args'=>func_num_args(), 'args'=>json_encode(func_get_args())]);
     }
 
     public function hookFrontendCheckout()
@@ -73,9 +73,10 @@ class shopHooktestPlugin extends shopPlugin
         return $this->hookContent('frontend_search');
     }
 
-    private function hookContent($hook_name) {
+    private function hookContent($hook_name, $options=array()) {
         $view = waSystem::getInstance()->getView();
         $view->assign('hook_name', $hook_name);
+        $view->assign('options', $options);
         
         $template = $this->path . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . 'hook_test.tpl';
         
